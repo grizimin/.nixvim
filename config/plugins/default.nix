@@ -7,27 +7,24 @@
     ];
 
     plugins = {
+        web-devicons.enable = true;
+
         better-escape.enable = true;
         nvim-autopairs.enable = true;
         lualine.enable = true;
         which-key.enable = true;
         lazygit.enable = true;
+        telescope.enable = true;
 
-
-        telescope = {
-        enable = true;
-            keymaps = {
-              "<leader>fg" = "live_grep";
-              "<C-p>" = {
-                action = "git_files";
-                options = {
-                  desc = "Telescope Git Files";
-                };
-              };
+        bufferline.enable = true;
+        bufferline.settings = {
+            options = {
+                mode = "buffers";
+                show_close_icon = false;
+                diagnostics = "nvim_lsp";
             };
-            extensions.fzf-native = { enable = true; };
         };
-        
+
         wilder = {
             enable = true;
             modes = [ ":" "/" "?" ];
@@ -36,8 +33,8 @@
         gitsigns = {
             enable = true;
             settings = {
-            current_line_blame = true;
-            trouble = true;
+                current_line_blame = true;
+                trouble = true;
             };
         };
         auto-save = {

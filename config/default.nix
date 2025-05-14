@@ -2,9 +2,10 @@
 
 {
     imports = [
-        ./settings.nix
-        ./colorscheme.nix
         ./plugins
         ./lsp
+        ./settings.nix
+        ./colorscheme.nix
+        ./keymaps.nix
     ];
 }
