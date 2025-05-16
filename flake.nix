@@ -16,7 +16,7 @@
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           module = config;
-        } // { meta = description = "A nixvim configuration"};
+        };
       in
       {
         formatter = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
